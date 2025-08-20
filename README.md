@@ -4,7 +4,7 @@ A simple Python project that sorts packages into different stack categories base
 
 ## Requirements
 
-- Python 3.13.1
+- Python 3.11.5+
 - pytest
 
 ## Installation
