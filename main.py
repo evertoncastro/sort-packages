@@ -1,5 +1,6 @@
 from typing import List
 from enum import StrEnum
+import sys
 
 
 class StackEnum(StrEnum):
@@ -36,4 +37,26 @@ def sort(width: float, height: float, length: float, mass: float) -> str:
     if any([is_bulky, is_heavy]):
         return StackEnum.SPECIAL
     return StackEnum.STANDARD
+
+if __name__ == "__main__":
+    if len(sys.argv) != 5:
+        print("Usage: python main.py <width> <height> <length> <mass>")
+        print("Example: python main.py 100 100 100 20")
+        sys.exit(1)
+    
+    try:
+        width = float(sys.argv[1])
+        height = float(sys.argv[2])
+        length = float(sys.argv[3])
+        mass = float(sys.argv[4])
+        
+        result = sort(width, height, length, mass)
+        print(f"Package dimensions: {width} x {height} x {length} cm")
+        print(f"Package mass: {mass} kg")
+        print(f"Volume: {volume_calc(width, height, length)} cm³")
+        print(f"Result: {result}")
+        
+    except ValueError as e:
+        print(f"Error: {e}")
+        sys.exit(1)
     

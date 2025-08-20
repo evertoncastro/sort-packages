@@ -16,11 +16,20 @@ pip install -r requirements.txt
 
 ## Running the Project
 
+### Run Main Program
+```bash
+python main.py <width> <height> <length> <mass>
+```
+
+**Example:**
+```bash
+python main.py 10 10 10 10
+```
+
 ### Run Tests
 ```bash
 pytest test.py
 ```
-
 
 ## Project Structure
 
