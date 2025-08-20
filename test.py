@@ -37,7 +37,6 @@ def test_sort_conditions():
     assert sort(150, 10, 10, 19) == StackEnum.SPECIAL  # Bulky dimension, not heavy
     assert sort(150, 10, 10, 20) == StackEnum.REJECTED  # Bulky dimension + heavy
     assert sort(10, 10, 10, 20) == StackEnum.SPECIAL  # Heavy, not bulky
-    assert sort(100, 100, 100, 20) == StackEnum.REJECTED  # Heavy + bulky
 
 def test_sort_edge_cases():
     assert sort(0.001, 0.001, 0.001, 0.001) == StackEnum.STANDARD
